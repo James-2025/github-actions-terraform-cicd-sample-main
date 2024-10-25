@@ -29,6 +29,8 @@ variable "name" {
 # Azure-specific variables
 variable "azure_client_id" {
   description = "Azure Service Principal Client ID"
+  default = "ee763340-99de-48e8-98d5-d0b248d9f43f"
+
 }
 
 variable "azure_client_secret" {
