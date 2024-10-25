@@ -56,4 +56,5 @@ variable "azure_instance_name" {
 variable "azure_admin_password" {
   description = "Admin password for the Azure VM"
   sensitive   = true
+  default = "12345"
 }
