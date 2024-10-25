@@ -35,14 +35,20 @@ variable "azure_client_id" {
 
 variable "azure_client_secret" {
   description = "Azure Service Principal Client Secret"
+  default = "43ab9a8a-4f78-4744-95ca-293982c366be"
+
 }
 
 variable "azure_subscription_id" {
   description = "Azure Subscription ID"
+  default = "71746fc8-d31b-44dd-8ff5-7b8f5cd8b9e2"
+
 }
 
 variable "azure_tenant_id" {
   description = "Azure Tenant ID"
+  default = "d4d9681d-8b21-4962-8189-d11eb4323abf"
+
 }
 
 variable "azure_region" {
