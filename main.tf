@@ -2,10 +2,11 @@ terraform {
   backend "s3" {
     bucket         = "bj001"
     key            = "terraform.tfstate"
-    region         = "eu-north-1"
+    region         = "us-east-1"
   }
 }
 
+# AWS Provider
 provider "aws" {
   region = var.aws_region
 }
@@ -20,10 +21,14 @@ provider "azurerm" {
   tenant_id       = var.azure_tenant_id
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+# AWS Instance
+>>>>>>> parent of f07c7ff (c010)
 data "aws_ami" "amazon_linux" {
   most_recent = true
   owners      = ["amazon"]
@@ -56,7 +61,13 @@ resource "aws_instance" "example" {
   }
 }
 
+# Azure Resources
+resource "azurerm_resource_group" "example_rg" {
+  name     = "${var.azure_instance_name}-rg"
+  location = var.azure_region
+}
 
+<<<<<<< HEAD
 
 
 # Azure Resources
@@ -65,6 +76,8 @@ resource "azurerm_resource_group" "example_rg" {
   location = var.azure_region
 }
 
+=======
+>>>>>>> parent of f07c7ff (c010)
 resource "azurerm_virtual_network" "example_vnet" {
   name                = "${var.azure_instance_name}-vnet"
   address_space       = ["10.0.0.0/16"]
